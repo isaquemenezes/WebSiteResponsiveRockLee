@@ -1,0 +1,215 @@
+@import url(../font-awesome/font-awesome.min.css);
+
+*{
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+// Colors Variables
+$light:#f7f7f7;
+$dark: #222121;
+$lime: #00CC66;
+$orangeRed:#fB4B4E;
+$blue:#2541B2;
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+.nav__bar {
+    background: $light;
+    position: relative;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vh - 1200px) / 2);
+    // padding: 0.5rem 15px;
+    z-index: 10;
+
+    .nav__logo {
+        color: $dark;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 24px;
+        @extend %align-center;
+    }
+
+    .nav__bars {
+        opacity: 0;
+
+        @media screen and (max-width: 768px) {
+            color: $dark;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 2rem;
+
+        }
+    }
+
+    .nav__menu {
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+
+        .nav__menu-links {
+            color: $dark;
+            @extend %align-center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 0 1rem;
+
+           
+        }
+        .nav__menu-links:hover {
+            color: $lime;
+            transition: all 0.3s ease;
+        }
+
+        #button {
+            padding: 12px 24px;
+            background: $lime;
+            border: none;
+            outline: none;
+            border-radius: .5rem;
+            margin-left: 3rem;
+            color: $light;
+
+
+            &:hover {
+                background: $orangeRed;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+}
+
+.section__one {
+
+    background-color: $light;
+
+
+
+    .one__container{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        height: 90vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 24px;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        .container__left {
+            width: 100%;
+            line-height: 1.2;
+
+            @media screen and (max-width: 768px) {
+               padding: 5rem 0;
+            }
+
+            @media screen and (max-width: 200px) {
+                line-height: 1.5;
+            }
+        }
+
+        .container__left h1 {
+            font-size: 4rem;
+            color: $lime;
+
+            @media screen and (max-width: 200px) {
+                font-size: 2rem;
+            }
+        }
+
+        .container__left h2 {
+            font-size: 4rem;
+            color: $dark;
+
+            @media screen and (max-width: 200px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .container__left p {
+            font-size: 2rem;
+            margin-top: 1rem;
+            color: $dark;
+            font-weight: 700;
+
+            @media screen and (max-width: 200px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .section__one-button {
+            font-size: 1rem;
+            background-color: $lime;
+            padding: 14px 32px;
+            border: none;
+            border-radius: .5rem;
+            color: $light;
+            margin-top: 2rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+            outline: none;
+
+        }
+        .section__one-button a {
+            position: relative;
+            z-index: 2;
+            color: $light;
+            text-decoration: none;
+        }
+
+        .section__one-button:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $orangeRed;
+            transition: all 0.3s;
+            border-radius: .5rem;
+
+        }
+
+        .section__one-button:hover:after {
+            width: 100%;
+        }
+        .one__container-right {
+            text-align: center;
+        }
+
+        .one__container-img {
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+}
+
+
