@@ -17,6 +17,17 @@
           align-items: center;
 }
 
+.h-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #000;
+  -webkit-box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+          box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+}
+
 .nav__bar {
   background: #f7f7f7;
   position: relative;
@@ -39,18 +50,19 @@
   margin-left: 24px;
 }
 
-.nav__bar .nav__bars {
+.nav__bar .nav__toggle {
   opacity: 0;
 }
 
 @media screen and (max-width: 768px) {
-  .nav__bar .nav__bars {
+  .nav__bar .nav__toggle {
     color: #222121;
     opacity: 1;
     position: absolute;
     top: 22px;
     right: 20px;
     font-size: 2rem;
+    cursor: pointer;
   }
 }
 

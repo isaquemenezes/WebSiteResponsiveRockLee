@@ -20,6 +20,19 @@ $blue:#2541B2;
     align-items: center;
 }
 
+.h-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #000;
+    box-shadow: 0 1px 4px rgba(146,161,176,.15);
+
+
+
+}
+
 .nav__bar {
     background: $light;
     position: relative;
@@ -39,19 +52,22 @@ $blue:#2541B2;
         @extend %align-center;
     }
 
-    .nav__bars {
+    .nav__toggle {
         opacity: 0;
-
-        @media screen and (max-width: 768px) {
-            color: $dark;
-            opacity: 1;
-            position: absolute;
-            top: 22px;
-            right: 20px;
-            font-size: 2rem;
-
-        }
+   
+       @media screen and (max-width: 768px) {
+           color: $dark;
+           opacity: 1;
+           position: absolute;
+           top: 22px;
+           right: 20px;
+           font-size: 2rem;
+           cursor: pointer;
+   
+       }
     }
+
+    
 
     .nav__menu {
         @extend %align-center;
